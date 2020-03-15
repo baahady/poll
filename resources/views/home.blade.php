@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="/poll/create" class="btn btn-dark">create new poll</a>
                 </div>
             </div>
         </div>
