@@ -11,17 +11,23 @@
                     <form action="/poll" method="post">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Title</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+                        <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
                         <small id="emailHelp" class="form-text text-muted">Enter title here please.</small>
+                        @error('title')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror                         
                       </div> 
                       <div class="form-group">
                         <label for="exampleInputEmail1">Purpose</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter purpose">
+                        <input type="text" name="purpose" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter purpose">
                         <small id="emailHelp" class="form-text text-muted">Enter purpose here please.</small>
+                        @error('purpose')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror                       
                       </div>  
-                      <input type="submit" value="submit">                        
+                      <button type="submit" class="btn btn-success">Save new poll</button>   
+                      @csrf                     
                     </form>
-
                 </div>
             </div>
         </div>
