@@ -24,3 +24,6 @@ Route::get('/poll/create','PollController@create');
 Route::post('/poll','PollController@store');
 Route::get('/poll/{poll}','PollController@show');
 
+Route::get('/polls/{poll}/questions/create','QuestionController@create');
+Route::post('/polls/{poll}/questions','QuestionController@store');
+

@@ -8,7 +8,7 @@
                 <div class="card-header">{{$poll->title}}</div>
 
                 <div class="card-body">
-
+                    <a class="btn btn-dark" href="/polls/{{$poll->id}}/questions/create">add new question</a>
                 </div>
             </div>
         </div>
