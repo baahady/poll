@@ -20,9 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/poll/create','PollController@create');
-Route::post('/poll','PollController@store');
-Route::get('/poll/{poll}','PollController@show');
+Route::get('/polls/create','PollController@create');
+Route::post('/polls','PollController@store');
+Route::get('/polls/{poll}','PollController@show');
 
 Route::get('/polls/{poll}/questions/create','QuestionController@create');
 Route::post('/polls/{poll}/questions','QuestionController@store');

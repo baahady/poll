@@ -27,7 +27,7 @@ class PollController extends Controller
 
     	$poll = auth()->user()->polls()->create($data);
 
-    	return redirect('/poll/'.$poll->id);
+    	return redirect('/polls/'.$poll->id);
     }
 
     public function show(\App\poll $poll){

@@ -8,7 +8,7 @@
                 <div class="card-header">Create new poll</div>
 
                 <div class="card-body">
-                    <form action="/poll" method="post">
+                    <form action="/polls" method="post">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Title</label>
                         <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">

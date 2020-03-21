@@ -22,6 +22,6 @@ class questionController extends Controller
         $questions = $poll->questions()->create($data['question']);
         $questions->answers()->createMany($data['answers']);
         
-        return redirect('/poll/'.$poll->id);
+        return redirect('/polls/'.$poll->id);
     }
 }

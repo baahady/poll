@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <a href="/poll/create" class="btn btn-dark">create new poll</a>
+                    <a href="/polls/create" class="btn btn-dark">create new poll</a>
                 </div>
             </div>
         </div>
