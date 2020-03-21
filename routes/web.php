@@ -27,3 +27,5 @@ Route::get('/polls/{poll}','PollController@show');
 Route::get('/polls/{poll}/questions/create','QuestionController@create');
 Route::post('/polls/{poll}/questions','QuestionController@store');
 
+Route::get('/surveys/{poll}-{slug}','SurveyController@show');
+

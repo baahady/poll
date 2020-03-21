@@ -31,6 +31,8 @@ class PollController extends Controller
     }
 
     public function show(\App\poll $poll){
+		$poll->load('questions.answers');
+		// dd($poll);
     	return view('poll.show',compact('poll'));
     }
 }
