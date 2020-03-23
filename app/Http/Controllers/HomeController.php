@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $polls = auth()->user()->polls;
+        return view('home',compact('polls'));
     }
 }

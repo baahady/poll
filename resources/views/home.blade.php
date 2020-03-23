@@ -17,6 +17,19 @@
                     <a href="/polls/create" class="btn btn-dark">create new poll</a>
                 </div>
             </div>
+
+            <div class="card mt-4">
+                <div class="card-header">Dashboard</div>
+
+                <div class="card-body">
+                    <ul class="list-group">
+                        @foreach($polls as $poll)
+                            <li class="list-group-item"><a href="/polls/{{$poll->id}}">{{$poll->title}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>        
+        
         </div>
     </div>
 </div>
