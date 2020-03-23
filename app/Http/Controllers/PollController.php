@@ -30,8 +30,8 @@ class PollController extends Controller
     	return redirect('/polls/'.$poll->id);
     }
 
-    public function show(\App\poll $poll){
-		$poll->load('questions.answers');
+    public function show(\App\Poll $poll){
+		$poll->load('questions.answers.responses');
 		// dd($poll);
     	return view('poll.show',compact('poll'));
     }

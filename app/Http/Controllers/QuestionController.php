@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Poll;
+use \App\Question;
 class questionController extends Controller
 {
     public function create(Poll $poll){
@@ -23,5 +24,13 @@ class questionController extends Controller
         $questions->answers()->createMany($data['answers']);
         
         return redirect('/polls/'.$poll->id);
+    }
+
+    public function destroy(Poll $poll, Question $question){
+
+        $question->answers()->delete();
+        $question->delete();
+
+        return redirect($poll->path());
     }
 }

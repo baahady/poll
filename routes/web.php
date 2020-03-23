@@ -26,6 +26,7 @@ Route::get('/polls/{poll}','PollController@show');
 
 Route::get('/polls/{poll}/questions/create','QuestionController@create');
 Route::post('/polls/{poll}/questions','QuestionController@store');
+Route::delete('/polls/{poll}/questions/{question}','QuestionController@destroy');
 
 Route::get('/surveys/{poll}-{slug}','SurveyController@show');
 Route::post('/surveys/{poll}-{slug}','SurveyController@store');

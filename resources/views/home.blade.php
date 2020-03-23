@@ -24,7 +24,15 @@
                 <div class="card-body">
                     <ul class="list-group">
                         @foreach($polls as $poll)
-                            <li class="list-group-item"><a href="/polls/{{$poll->id}}">{{$poll->title}}</a></li>
+                            <li class="list-group-item">
+                            <a href="{{$poll->path()}}">{{$poll->title}}</a>
+                            
+                            <div class="mt-2">
+                                <small class="font-weight-bold">Public Url</small>
+                                <p><a href="{{$poll->publicPath()}}">{{$poll->publicPath()}}</a></p>
+                            </div>
+
+                            </li>
                         @endforeach
                     </ul>
                 </div>
